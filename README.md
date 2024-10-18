@@ -102,14 +102,17 @@ user_data = {"age": 35, "department": "Sales"}
 result = evaluate_rule(rule, user_data)
 ```
 
-### Modifying Rules
+### Modifying a Rule
+To modify an existing rule:
 
-To modify a rule against user data:
-
-```python
-from services.rule_service import create_rule, evaluate_rule
-rule = create_rule("age > 30 AND department = Sales")
-user_data = {"age": 35, "department": "Sales"}
-result = evaluate_rule(rule, user_data)
+``` python
+from services.rule_service import modify_rule
+# Modify the operator in a simple rule
+rule = create_rule("age > 30")
+modified_rule = modify_rule(rule, ['value'], '<')
+print(modified_rule)  # Output: age < 30
+# Modify a value in a complex rule
+complex_rule = create_rule("(age > 30 AND department = 'Sales') OR (salary > 50000)")
+modified_complex_rule = modify_rule(complex_rule, ['left', 'right', 'value'], 'Marketing')
+print(modified_complex_rule)  # Output: ((age > 30 AND department = 'Marketing') OR (salary > 50000))
 ```
-
