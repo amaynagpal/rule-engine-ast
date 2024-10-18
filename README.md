@@ -31,14 +31,7 @@ This project implements a simple 3-tier rule engine application using Abstract S
    pip install -r requirements.txt
    ```
 
-4. Set up the database:
-   ```
-   flask db init
-   flask db migrate
-   flask db upgrade
-   ```
-
-5. Run the application:
+4. Run the application:
    ```
    python app.py
    ```
