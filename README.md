@@ -49,18 +49,22 @@ This project implements a simple 3-tier rule engine application using Abstract S
 
 ### Create Rule Page
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/4fe1e1e3-8e69-4a2f-9b68-93a8e948ccb8">
+<br>
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/21ec383f-d957-47b7-831c-56a78533aff6">
 
 ### Combine Rule
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/5d7d8631-193e-48f6-8e15-9695d6503ef6">
+<br>
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/828c69c3-470c-484c-8c5a-d2949c87a9c7">
 
 ### Evaluate Rule
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/b91dcb62-1818-4976-931a-8a1773676cba">
+<br>
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/bdcd4353-3355-48e6-81c2-a7b5283bcf80">
 
 ### Modify Rule
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/4db1db98-dd35-413c-b015-ffc60e78dcb7">
+<br>
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/79ce414d-f357-41de-aa4e-706341989fe0">
 
 ## Usage
