@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine - Modify Rule</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('create_rule_view') }}">Create Rule</a></li>
+                <li><a href="{{ url_for('combine_rules_view') }}">Combine Rules</a></li>
+                <li><a href="{{ url_for('evaluate_rule_view') }}">Evaluate Rule</a></li>
+                <li><a href="{{ url_for('modify_rule_view') }}">Modify Rule</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Modify Rule</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <label for="rule">Rule String:</label>
+            <input type="text" id="rule" name="rule" required>
+            <label for="path">Modification Path (comma-separated, e.g., left,right,value):</label>
+            <input type="text" id="path" name="path" required>
+            <label for="new_value">New Value:</label>
+            <input type="text" id="new_value" name="new_value" required>
+            <button type="submit">Modify Rule</button>
+        </form>
+    </div>
+</body>
+</html>

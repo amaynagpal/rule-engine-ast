@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine - {% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('create_rule_view') }}">Create Rule</a></li>
+                <li><a href="{{ url_for('combine_rules_view') }}">Combine Rules</a></li>
+                <li><a href="{{ url_for('evaluate_rule_view') }}">Evaluate Rule</a></li>
+                <li><a href="{{ url_for('modify_rule_view') }}">Modify Rule</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Rule Engine</h1>
+        <p>A dynamic rule engine application that evaluates user eligibility based on customizable rules using an Abstract Syntax Tree (AST) for real-time decision-making. Click on Create Rule, Combine Rule, or Evaluate Rule in the navbar above to start exploring!</p>
+        {% block content %}{% endblock %}
+        
+    </div>
+</body>
+</html>
